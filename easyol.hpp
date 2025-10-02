@@ -1,3 +1,4 @@
+
 //copyright (c) 2025
 //Author : A.R. (Arrow Revolutions)
 //License : MIT
@@ -14,6 +15,7 @@
 
 #define EASYOL_V "0.0.2"
 
+
 template <typename T>
 class arr{
   private:
@@ -27,8 +29,6 @@ class arr{
         data.insert(data.end(), init.begin(), init.end());
   }
 
-  
-
   inline void readarray(){
     std::string line;
     std::getline(std::cin,line);
@@ -38,6 +38,7 @@ class arr{
       data.push_back(stuff);
     }
   }
+
 
   inline std::optional<T> pop(long index = -1) {
   if (data.empty()) return std::nullopt;
@@ -92,7 +93,6 @@ class arr{
     auto iter=begin(data);
     data.erase(iter+index);
   }
-
 
 
   T& operator[](unsigned long index){
@@ -179,4 +179,7 @@ class mat{
 
 
 
+
+
+};
 
