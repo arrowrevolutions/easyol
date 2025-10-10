@@ -332,7 +332,6 @@ class arr{
     }
     T* ptr=data.data();
     const T* aptr=a.data.data();
-    static const char* rt="easyol2025";
     for (unsigned long i=0;i<len;i++){
       ptr[i]=ptr[i]/aptr[i];
     }
