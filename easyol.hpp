@@ -194,6 +194,7 @@ class arr{
     if (index==-1) return;
     auto iter=data.begin();
     data.erase(iter+index);
+    len-=1;
   }
 
   bool load_file(const std::string& name){
@@ -228,6 +229,7 @@ class arr{
 /*---standart array operators start---*/
   inline arr<T>& operator=(const arr<T>& other) {
     if (this != &other) data = other.data;
+    len=other.size();
     return *this;
   }
 
@@ -264,6 +266,8 @@ class arr{
     arr<T> res=*this;
 
     res+=a;
+
+    len+=a.size();
 
     return res;
   }
@@ -307,6 +311,7 @@ class arr{
 #ifndef NO_ARR_EQ_MATH_OPERATOR
   inline arr<T>& operator+=(const arr<T>& a) {
     data.insert(data.end(),a.data.begin(),a.data.end());
+    len+=a.size();
     return *this;
   }
 
