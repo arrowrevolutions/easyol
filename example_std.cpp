@@ -10,7 +10,7 @@ int main() {
     std::vector<int> a = {1, 2, 3, 4, 5};
     std::vector<int> b = {1, 2, 3, 7, 5};
     std::vector<std::vector<int>> test = {{1, 2, 3}, {1, 5, 6}};
-    std::vector<std::string> d = {"hello", "bitch", "its me"};
+    std::vector<std::string> d = {"hello", ",", "its me"};
 
     for (auto& s : d)
         std::cout << s << ' ';
